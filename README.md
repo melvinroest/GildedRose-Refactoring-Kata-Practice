@@ -1,6 +1,10 @@
 To run use: `npm test` as there is only one user of this particular app, all the testcases! 😄
 
-gilded_rose_original.js is slightly altered. I altered the Shop constructor, since the requirements kind of specify that an item cannot have a quality of or more, which I also interpreted as that it cannot be instantialized as 50 or more (unless it's an exception to the rule). Other than that is completely similar, the actual challenge can be found on: https://github.com/emilybache/GildedRose-Refactoring-Kata
+My solution is to be found at: `gilded_rose.js`
+
+Link to the challenge: https://github.com/emilybache/GildedRose-Refactoring-Kata
+
+`gilded_rose_original.js` is slightly altered. I altered the Shop constructor, since the requirements kind of specify that an item cannot have a quality of or more, which I also interpreted as that it cannot be instantialized as 50 or more (unless it's an exception to the rule). Other than that is completely similar, if you get nervous by my messy way of working reference: https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/js-jasmine/src/gilded_rose.js
 
 **Sounds fun and all but why would I want to do this?**
 
