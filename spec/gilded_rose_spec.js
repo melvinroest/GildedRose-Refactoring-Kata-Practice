@@ -47,7 +47,7 @@ describe("Once the sell by date has passed, Quality degrades twice as fast", () 
     for(let i = 0; i < 17; i++){
       items = gildedRose.updateQuality()
     }
-    expect(items[0].quality).toEqual(22) //42 - 14 - 6 = 22
+    expect(items[0].quality).toEqual(22)
   })
 })
 
@@ -121,6 +121,24 @@ describe("Backstage passes, like aged brie, increases in Quality as its SellIn v
       expect(backstagePasses.quality).toEqual(0)
       expect(backstagePasses.sellIn).toEqual(-1)
     })
+  })
+})
+
+describe("Aged brie gets better as the sell by date closes", () => {
+  // The requirements were not fully clear *how* Aged Brie would change.
+  // The sentence was a bit convoluted, so I am taking the spec from the original
+  // code, which is: Aged Brie increases 2 quality points *after* its sell by date.
+
+  const gildedRose = new Shop([
+    new Item("Aged Brie", 5, 15)])
+  const brie = gildedRose.items[0]
+
+  for(let i = 0; i < 10; i++){
+    gildedRose.updateQuality()
+  }
+  
+  it("Increases Aged Brie quality to 30", () => {
+    expect(brie.quality).toEqual(30)
   })
 })
 
